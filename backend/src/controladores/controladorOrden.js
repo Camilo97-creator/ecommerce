@@ -1,7 +1,6 @@
 const Orden = require('../modelos/orden');
 const Carrito = require('../modelos/carrito');
 
-
 exports.crearOrdenDesdeCarrito = async (req, res) => {
     const { usuarioId } = req.params
     try {
@@ -26,7 +25,7 @@ exports.crearOrdenDesdeCarrito = async (req, res) => {
             total: total
         });
         await nuevaOrden.save();
-        await Carrito.findByIdAndUpdate({ usuarioId: usuarioId }, {productos: []})
+        await Carrito.findOneAndUpdate({ usuarioId: usuarioId }, {productos: []})
         res.status(201).json({ mensaje: 'Orden creada con exito', orden: nuevaOrden});
     } catch (error) {
         res.status(500).json({ mensaje: 'Error al crear la orden', error: error.message });
