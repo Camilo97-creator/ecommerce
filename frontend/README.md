@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Proyecto E-comerce MERN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto de ecmomerce desarrollado con el stack MERN (MongoDB, Express, React, y node.js). El sistema permite a los usuarios navegar por categorías de productos, ver detalles de los productos, agregar productos al carrito y procesar compras. Los administradores pueden gestionar prodcutos, categorías, y órdenes.
 
-## Available Scripts
+## Scripts disponibles
 
-In the project directory, you can run:
+En el directorio del proyecto, puedes ejecutar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ejecuta la aplicación en modo de desarrollo.\
+Abre [http://localhost:3000](http://localhost:3000) para verla en tu navegador.
+La página se volverá a cargar cuando realices cambios.\
+También puedes ver errores de lint en la consola.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Descripción del proyecto
 
-### `npm test`
+El Ecommerce se creo en 2 parte principales:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-**Fronted**: Construido en React, con una interfaz interactiva y fácil de usar. Permite a los usuarios a realizar compras, agregar prodcutos al carrito y navegar por diferentes categorías.
 
-### `npm run build`
+-**Backend**: Configura con JavaScripts y con Express, proporciona los puntos finales necesarios para gestionar productos, categorías, usauario y órdenes. Además se utilizan JWT para autenticar a los usuarios y controlar el acceso de los administradores.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Funcionalidades princiales:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Navegar por categorías de prodcutos.
+- Ver detalles de prodcutos.
+- Agregar productos al carrito y realizar compras.
+- Autenticación de usuarios con JWT.
+- Administración de productos, categorías y órdenes con control de acceso.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tecnoologías Utilizadas
 
-### `npm run eject`
+- **Frontend**: React, API (para gestión del estado), HTML, CSS Y JavaScript.
+- **Backend**: Node.js, express, JWT.
+- **Base de datos**: MongoDB, Postgress, Mongoose.
+- **Control de versiones**: Git, GitHub.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Configuración del Backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Navega al direcotrio = cd backend.
+- Instala dependencias = npm install.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Configuración del Frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Navega  al directorio = cd frontend.
+- Instala dependencias = npm install.
 
-## Learn More
+## Estructura de la base de datos
+Las colecciones de la base de datos son:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    - Usaurios: Almacena infromación de los usuarios, incluidas las credenciales para la autenticación.
+    - Prodcutos: Almacena los prodcutos disponibles para la venta.
+    - Categorías: Almacena las categorías de prodcutos.
+    - Carrito: Almacena el carrito de compras de cada usuario.
+    - Órdeens: Almacena la información de las órdenes realizadas por los usuarios.
